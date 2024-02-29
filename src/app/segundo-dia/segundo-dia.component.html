@@ -1,0 +1,42 @@
+<p>segundo-dia works!</p>
+<button class="btn btn-secondary" (click)="clickButton('Mondongo')">hola</button>
+
+<div>
+<button class="btn" [ngClass]="{'btn-success' :variable==='Mondongo'}"> xdddd</button>
+</div>
+
+<ul *ngFor="let itemuser of user">
+<li>{{itemuser.nombre}}</li>
+<li>{{itemuser.descripcion}}</li>
+</ul>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">Desceripcion</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let itemuser of user">
+        <th >{{itemuser.nombre}}</th>
+        <td>{{itemuser.descripcion}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <!-- <h1>INPUTS</h1>
+
+  <p>Descripcion: {{name}}</p>
+  <p>Descripcion: {{name}}</p>
+  <input type="text" class="form-control" [(ngModel)]="name">
+  <input type="text" class="form-control" [(ngModel)]="description"> -->
+
+  <form [formGroup]="formulariouser">
+    <span>Nombre: </span>
+    <input type="text" formControlName="name">
+    <span>Descripcion: </span>
+    <input type="text" formControlName="description">
+    <button class="btn btn-success" (click)="sumbitForm()">sumbit Form</button>
+</form>
