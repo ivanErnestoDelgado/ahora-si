@@ -1,1 +1,25 @@
-<p>tercer-dia works!</p>
+
+<h3>titulo</h3>
+<input type="text" [(ngModel)]="name" class="form-control">
+<h3>cuerpo</h3>
+<input type="text" [(ngModel)]="name" class="form-control">
+<button class="btn btn-primary" (click)="servicio.onclickbutton(name)">click al servicio </button>
+
+<div style="height: 500px;overflow: auto;">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Desceripcion</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let itemuser of users;let i=index">
+            <th >{{(i+1)}}</th>
+            <th >{{editarTexto(itemuser.title)}}</th>
+            <td>{{itemuser.body | uppercase}}</td>
+          </tr>
+        </tbody>
+      </table>
+</div>
