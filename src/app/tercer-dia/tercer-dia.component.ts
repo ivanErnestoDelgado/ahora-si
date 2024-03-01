@@ -14,6 +14,11 @@ import { CommonModule } from '@angular/common';
 export class TercerDiaComponent {
   name=''
   users: any=[]
+  idPeticion=0
+  bodyPeticion=''
+  tituloPeticion=''
+
+  respuesta=''
  constructor(public servicio: ServiceService){
  }
  ngOnInit() {
@@ -21,10 +26,18 @@ export class TercerDiaComponent {
     console.log(resp);
     this.users=resp
   })
- 
+
 }
 editarTexto(text:string){
   console.log(text);
   return text;
+}
+
+mandarcosa(idP:number,titleP:string,bodyP:string){
+this.servicio.agregarCosa(idP,titleP,bodyP).subscribe(resp =>{
+  console.log(resp);
+  this.respuesta=resp.toString();
+})
+  
 }
 }

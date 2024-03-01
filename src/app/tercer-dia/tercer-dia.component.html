@@ -3,7 +3,10 @@
 <input type="text" [(ngModel)]="name" class="form-control">
 <h3>cuerpo</h3>
 <input type="text" [(ngModel)]="name" class="form-control">
-<button class="btn btn-primary" (click)="servicio.onclickbutton(name)">click al servicio </button>
+<button class="btn btn-primary" (click)="mandarcosa(1,'chorizo','fernan el crack')">Registrar</button>
+<button class="btn btn-primary" (click)="servicio.onclickbutton(name)">Eliminar</button>
+<button class="btn btn-primary" (click)="servicio.onclickbutton(name)">Editar</button>
+
 
 <div style="height: 500px;overflow: auto;">
     <table class="table">
