@@ -44,7 +44,7 @@
     <div class="col">
         <div class="my-google-map sticky-bottom">
                 <google-map [options]="mapOptions">
-                    <map-marker *ngFor="let marker of objubicaciones" [position]="marker.position"></map-marker>
+                    <map-marker *ngFor="let dato of  datos" [position]="dato.mark"></map-marker>
                  </google-map>
           </div>
     </div>
